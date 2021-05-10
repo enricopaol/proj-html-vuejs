@@ -9,6 +9,22 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+img {
+    width: 100%;
+    display: block;
+}
+
+// Containers
+.container-large {
+    width: 95%;
+    margin: auto;
+}
+
+.container-medium {
+    width: 70%;
+    margin: auto;
+}
+
 // Titles
 .section-title {
     font-size: $big_font_size;

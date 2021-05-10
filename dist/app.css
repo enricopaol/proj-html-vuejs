@@ -8,6 +8,95 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-span {
+img {
+  width: 100%;
+  display: block;
+}
+
+.container-large {
+  width: 95%;
+  margin: auto;
+}
+
+.container-medium {
+  width: 70%;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 52px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.card-title {
+  color: #ea4a56;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.divider-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.header-links {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.italic-text {
+  font-style: italic;
   font-family: "Merriweather", serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 22px;
+}
+
+.normal-text {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  color: #75726e;
+  font-size: 16px;
+}
+
+.faq-text {
+  text-transform: uppercase;
+  color: #ea4a56;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/home_slider.jpg);
+  background-size: cover;
+}
+header .container-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .row-top {
+  padding: 25px 0;
+}
+header .row-top .logo {
+  width: 260px;
+}
+header .row-top .burger {
+  color: #fff;
+  height: 25px;
+  width: 35px;
+}
+header .row-top .burger .bar {
+  height: 2px;
+  background-color: #fff;
+}
+header .row-top .burger .bar:nth-child(2) {
+  height: 3px;
+  margin: 6px 0;
 }
