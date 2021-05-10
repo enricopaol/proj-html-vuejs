@@ -75,7 +75,8 @@ header {
                     padding: 10px 30px;
                     text-transform: uppercase;
                     color: #fff;
-                    text-decoration: none;                    
+                    text-decoration: none;  
+                    transition: background-color .12s ease;                  
 
                     &:first-child {
                         background-color: $brand_primary_color;
@@ -107,6 +108,8 @@ header {
         width: 100%;
         height: 100%;
         background-color: $brand_primary_color; 
+        animation-name: nav-opacity;
+        animation-duration: .32s;        
         
         &.active {
             display: block;
@@ -133,13 +136,21 @@ header {
                     transform: translate(-50%, -50%);                    
                     height: 3px;
                     width: 35px;
-                    background-color: #fff;
+                    background-color: #fff;                                           
 
                     &:first-child {
-                        transform: rotate(45deg);
+                        transform: rotate(0deg);
+                        animation-name: times-1;
+                        animation-duration: .42s;
+                        animation-timing-function: ease; 
+                        animation-fill-mode: forwards;
                     }
                     &:last-child {
-                        transform: rotate(-45deg);
+                        transform: rotate(0deg);
+                        animation-name: times-2;
+                        animation-duration: .42s;
+                        animation-timing-function: ease;
+                        animation-fill-mode: forwards;
                     }
                 }
             }
@@ -162,7 +173,7 @@ header {
                 a {
                     opacity: 0.5;                    
 
-                    &:hover                     {
+                    &:hover {
                         opacity: 1;
                     }                    
                 }                
@@ -171,4 +182,34 @@ header {
     };
 
     
+}
+
+
+// Animations
+
+@keyframes nav-opacity {
+    from {
+        opacity: 0.1
+    } to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes times-1 {
+    1% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes times-2 {
+    1% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(-45deg);
+    }
 }
