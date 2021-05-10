@@ -14,7 +14,7 @@ img {
 }
 
 .container-large {
-  width: 95%;
+  width: 92%;
   margin: auto;
 }
 
@@ -31,7 +31,7 @@ img {
 
 .card-title {
   color: #ea4a56;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -39,7 +39,7 @@ img {
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .header-links {
@@ -51,9 +51,9 @@ img {
 .italic-text {
   font-style: italic;
   font-family: "Merriweather", serif;
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .normal-text {
@@ -66,7 +66,7 @@ img {
 .faq-text {
   text-transform: uppercase;
   color: #ea4a56;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -75,6 +75,12 @@ header {
   width: 100%;
   background-image: url(../img/home_slider.jpg);
   background-size: cover;
+  background-position: center center;
+}
+header .header-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 header .container-large {
   display: flex;
@@ -91,6 +97,7 @@ header .row-top .burger {
   color: #fff;
   height: 25px;
   width: 35px;
+  cursor: pointer;
 }
 header .row-top .burger .bar {
   height: 2px;
@@ -99,4 +106,25 @@ header .row-top .burger .bar {
 header .row-top .burger .bar:nth-child(2) {
   height: 3px;
   margin: 6px 0;
+}
+header .jumbotron {
+  flex-grow: 1;
+  position: relative;
+}
+header .jumbotron .teaser {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+header .jumbotron .teaser h1 {
+  font-size: 105px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+header .jumbotron .teaser .italic-text {
+  margin-bottom: 30px;
 }
