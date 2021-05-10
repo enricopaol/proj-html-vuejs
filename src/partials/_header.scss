@@ -9,7 +9,6 @@ header {
         display: flex;
         flex-direction: column;
         height: 100%;
-        position: relative;
     }
 
     .container-large {
@@ -102,7 +101,7 @@ header {
 
     nav {        
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -127,7 +126,12 @@ header {
                 position: relative;
                 height: 60px;
                 width: 35px;
-                
+
+                &:hover {
+                    .times {
+                        opacity: 1;
+                    } 
+                }                
 
                 .times {
                     position: absolute;
@@ -136,7 +140,9 @@ header {
                     transform: translate(-50%, -50%);                    
                     height: 3px;
                     width: 35px;
-                    background-color: #fff;                                           
+                    background-color: #fff;  
+                    opacity: 0.7;    
+                    transition: opacity .12s;                                     
 
                     &:first-child {
                         transform: rotate(0deg);

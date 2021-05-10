@@ -1,0 +1,10 @@
+@mixin line_after_title  {
+    content: '';
+    height: 1px;
+    background-color: $brand_line_after_color;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);    
+}

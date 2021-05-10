@@ -1,0 +1,28 @@
+.music-life {
+    padding: 60px 0 50px;
+    background-color: $brand_tertiary_color;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 35%;
+        height: 10px;
+        background-color: $brand_primary_color;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-title {
+        position: relative;
+        padding-bottom: 30px;
+
+        &::after {
+            @include line_after_title;
+        }
+    }
+
+    
+}
