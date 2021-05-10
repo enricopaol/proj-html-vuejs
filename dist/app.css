@@ -24,7 +24,7 @@ img {
 }
 
 .container-small {
-  width: 45%;
+  width: 55%;
   margin: auto;
 }
 
@@ -32,6 +32,9 @@ img {
   font-size: 52px;
   color: #fff;
   font-weight: 700;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .card-title {
@@ -67,6 +70,7 @@ img {
   font-weight: 400;
   color: #75726e;
   font-size: 16px;
+  line-height: 30px;
 }
 
 .faq-text {
@@ -290,7 +294,7 @@ header nav .menu li a:hover {
   }
 }
 .music-life {
-  padding: 60px 0 50px;
+  padding: 60px 0;
   background-color: #323844;
   text-align: center;
   position: relative;
@@ -305,17 +309,32 @@ header nav .menu li a:hover {
   left: 50%;
   transform: translateX(-50%);
 }
-.music-life .section-title {
-  position: relative;
-  padding-bottom: 30px;
-}
 .music-life .section-title::after {
   content: "";
-  height: 1px;
-  background-color: #737376;
+  height: 2px;
+  background-color: #444e62;
   width: 20%;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.band-news {
+  background-color: #272b34;
+  padding: 60px 0;
+  text-align: center;
+}
+.band-news .section-title::after {
+  content: "";
+  height: 2px;
+  background-color: #444e62;
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.band-news .container-small {
+  margin-bottom: 60px;
 }

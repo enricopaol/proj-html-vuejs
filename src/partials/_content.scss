@@ -1,5 +1,6 @@
+// Music is life section
 .music-life {
-    padding: 60px 0 50px;
+    padding: 60px 0;
     background-color: $brand_tertiary_color;
     text-align: center;
     position: relative;
@@ -16,13 +17,36 @@
     }
 
     .section-title {
-        position: relative;
-        padding-bottom: 30px;
-
         &::after {
             @include line_after_title;
         }
     }
 
     
+}
+
+// Band News Section
+.band-news {
+    background-color: $brand_secondary_color;
+    padding: 60px 0;
+    text-align: center;
+
+    .section-title {        
+        &::after {
+            @include line_after_title;
+        }        
+    }
+
+    .container-small {
+        margin-bottom: 60px;
+    }
+
+    .news-cards {
+        
+    }
+
+
+
+    
+
 }
