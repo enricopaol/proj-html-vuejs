@@ -32,11 +32,12 @@
                         </div>
     
                         <!-- Burger Button -->
-                        <div class="burger">
+                        <div class="burger" @click="toggleNav()">
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
-                        </div>
+                        </div>                        
+
                     </div>                
                 </div>
     
@@ -54,6 +55,37 @@
                     </div>
 
                 </div>  
+
+                <!-- Nav -->
+                <nav :class="{active : navOpen}">
+                    <div class="nav-container">
+
+                        <div class="row-top">
+                            <div class="container-large">
+            
+                                <!-- logo -->
+                                <div class="logo">
+                                    <img src="img/avada-music-logo.png" alt="avada-music-logo">
+                                </div>
+            
+                                <!-- Burger Button -->
+                                <div class="burger" @click="toggleNav()">
+                                    <div class="times"></div>
+                                    <div class="times"></div>
+                                </div>                        
+        
+                            </div>                
+                        </div>
+
+                        <!-- Menu -->
+                        <ul class="menu">
+                            <li v-for="page in pages">
+                                <a class="header-links" href="#">{{page}}</a>
+                            </li>                            
+                        </ul>
+
+                    </div>                    
+                </nav>
 
             </div>            
         </header>

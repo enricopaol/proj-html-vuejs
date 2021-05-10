@@ -9,6 +9,7 @@ header {
         display: flex;
         flex-direction: column;
         height: 100%;
+        position: relative;
     }
 
     .container-large {
@@ -48,7 +49,7 @@ header {
 
         .teaser {
             position: absolute;
-            top: 50%;
+            top: calc(50% - 60px);
             left: 50%;
             transform: translate(-50%, -50%);
             color: #fff;
@@ -58,17 +59,116 @@ header {
             h1 {
                 font-size: 105px;
                 font-weight: 700;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
             }
 
             .italic-text {
-                margin-bottom: 30px;
+                margin-bottom: 60px;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    font-size: $standard_font_size;
+                    padding: 10px 30px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    text-decoration: none;                    
+
+                    &:first-child {
+                        background-color: $brand_primary_color;
+                        margin-right: 10px;
+                    }
+                    
+                    &:last-child {
+                        border: 1px solid #fff;
+                        margin-left: 10px;                        
+                    }
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
             }
 
             
         }
 
     }
+
+    nav {        
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $brand_primary_color; 
+        
+        &.active {
+            display: block;
+        }
+        
+        .nav-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-top {
+            .burger {
+                position: relative;
+                height: 60px;
+                width: 35px;
+                
+
+                .times {
+                    position: absolute;
+                    bottom: 50%;
+                    left: 0;
+                    transform: translate(-50%, -50%);                    
+                    height: 3px;
+                    width: 35px;
+                    background-color: #fff;
+
+                    &:first-child {
+                        transform: rotate(45deg);
+                    }
+                    &:last-child {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        .menu {
+            display: flex;
+            flex-grow: 1; 
+            list-style-type: none;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 0 60px;
+            
+            li {
+                &:first-child a {
+                    opacity: 1;
+                }
+
+                a {
+                    opacity: 0.5;                    
+
+                    &:hover                     {
+                        opacity: 1;
+                    }                    
+                }                
+            }
+        }
+    };
 
     
 }

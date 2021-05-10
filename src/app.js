@@ -2,9 +2,20 @@ var app = new Vue(
     {
         el: '#app',
         data: {
-            message: 'ciao'
+            pages: [
+                'Home',
+                'Meet The Brand',
+                'Live Dates',
+                'Latest News',
+                'Albums',
+                'Fans'
+            ],
+            navOpen: false
         },
         methods: {
+            toggleNav() {
+                this.navOpen = !this.navOpen;
+            }
 
         }
     }
