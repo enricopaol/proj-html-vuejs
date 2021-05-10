@@ -5,3 +5,56 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+// Titles
+.section-title {
+    font-size: $big_font_size;
+    color: #fff;
+    font-weight: 700;
+}
+
+.card-title {
+    color: $brand_primary_color;
+    font-size: $medium_font_size;
+    font-weight: 600;
+}
+
+.divider-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: $medium_font_size;
+}
+
+.header-links {
+    color: #fff;
+    font-size: $header_font_size;
+    font-weight: 400;    
+}
+
+
+// Texts
+.italic-text {
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    color: #fff;   
+    font-size: $medium_font_size; 
+}
+
+.normal-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    color: $brand_text_color;
+    font-size: $standard_font_size;
+}
+
+.faq-text {
+    text-transform: uppercase;
+    color: $brand_primary_color;
+    font-size: $medium_font_size;
+    font-weight: 400;
+}
