@@ -42,7 +42,70 @@
     }
 
     .news-cards {
-        
+        text-align: left;
+
+        .container-medium {
+            display: flex;
+        }
+
+        .col-left {
+            width: 65%;
+
+            .horizontal-card {
+                height: 280px;
+                position: relative;
+
+                &:first-child {
+                    margin-bottom: 25px;
+                }                
+
+                img {
+                    @include card_img;
+                }
+
+                .card-teaser {
+                    @include card_teaser;
+
+                    .card-title {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .vertical-cards-container {
+                display: flex;
+                height: 510px;
+                margin-bottom: 25px;
+
+                .vertical-card {
+                    @include vertical_blog_card;
+
+                    &:first-child {
+                        margin-right: calc(25px / 2);
+                    }
+                    &:last-child {
+                        margin-left: calc(25px / 2)
+                    }
+                }
+            }
+
+
+        }
+
+        .col-right {
+            width: 35%;
+
+            // test
+            height: 200px;
+            padding-left: 25px;
+
+            .card-right-container {
+                height: 100%;
+                background-color: #fff;
+                border: 1px solid red;
+                width: 100%;
+            }
+        }
     }
 
 

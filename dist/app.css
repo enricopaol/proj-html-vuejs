@@ -338,3 +338,63 @@ header nav .menu li a:hover {
 .band-news .container-small {
   margin-bottom: 60px;
 }
+.band-news .news-cards {
+  text-align: left;
+}
+.band-news .news-cards .container-medium {
+  display: flex;
+}
+.band-news .news-cards .col-left {
+  width: 65%;
+}
+.band-news .news-cards .col-left .horizontal-card {
+  height: 280px;
+  position: relative;
+}
+.band-news .news-cards .col-left .horizontal-card:first-child {
+  margin-bottom: 25px;
+}
+.band-news .news-cards .col-left .horizontal-card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.band-news .news-cards .col-left .horizontal-card .card-teaser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #323844;
+  padding: 25px;
+}
+.band-news .news-cards .col-left .horizontal-card .card-teaser .card-title {
+  margin-bottom: 5px;
+}
+.band-news .news-cards .col-left .vertical-cards-container {
+  display: flex;
+  height: 510px;
+  margin-bottom: 25px;
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card {
+  height: 100%;
+  width: calc( 50% - 25px / 2 );
+  background-color: #fff;
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card:first-child {
+  margin-right: calc(25px / 2);
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card:last-child {
+  margin-left: calc(25px / 2);
+}
+.band-news .news-cards .col-right {
+  width: 35%;
+  height: 200px;
+  padding-left: 25px;
+}
+.band-news .news-cards .col-right .card-right-container {
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid red;
+  width: 100%;
+}

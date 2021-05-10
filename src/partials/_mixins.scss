@@ -9,6 +9,24 @@
     transform: translateX(-50%);    
 }
 
-@mixin paragraph_container {
+@mixin card_img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+}
+
+@mixin card_teaser {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $brand_tertiary_color;
+    padding: 25px;
+}
+
+@mixin vertical_blog_card {
+    height: 100%;
+    width: calc( 50% - 25px / 2 );
+    background-color: #fff;
 
 }
