@@ -21,12 +21,10 @@
     left: 0;
     width: 100%;
     background-color: $brand_tertiary_color;
-    padding: 25px;
+    padding: 20px;
 }
 
 @mixin vertical_blog_card {
     height: 100%;
     width: calc( 50% - 25px / 2 );
-    background-color: #fff;
-
 }

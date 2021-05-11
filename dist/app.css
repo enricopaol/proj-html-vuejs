@@ -39,7 +39,7 @@ img {
 
 .card-title {
   color: #ea4a56;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -47,7 +47,7 @@ img {
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .header-links {
@@ -62,21 +62,21 @@ img {
   font-family: "Merriweather", serif;
   font-weight: 300;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .normal-text {
   font-family: "Merriweather", serif;
   font-weight: 400;
   color: #75726e;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
 }
 
 .faq-text {
   text-transform: uppercase;
   color: #ea4a56;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -143,7 +143,7 @@ header .jumbotron .teaser .buttons {
   justify-content: center;
 }
 header .jumbotron .teaser .buttons a {
-  font-size: 16px;
+  font-size: 14px;
   padding: 10px 30px;
   text-transform: uppercase;
   color: #fff;
@@ -174,6 +174,7 @@ header nav {
           animation-name: nav-opacity;
   -webkit-animation-duration: 0.32s;
           animation-duration: 0.32s;
+  z-index: 999;
 }
 header nav.active {
   display: block;
@@ -345,10 +346,10 @@ header nav .menu li a:hover {
   display: flex;
 }
 .band-news .news-cards .col-left {
-  width: 65%;
+  width: 68%;
 }
 .band-news .news-cards .col-left .horizontal-card {
-  height: 280px;
+  height: 260px;
   position: relative;
 }
 .band-news .news-cards .col-left .horizontal-card:first-child {
@@ -366,7 +367,7 @@ header nav .menu li a:hover {
   left: 0;
   width: 100%;
   background-color: #323844;
-  padding: 25px;
+  padding: 20px;
 }
 .band-news .news-cards .col-left .horizontal-card .card-teaser .card-title {
   margin-bottom: 5px;
@@ -379,7 +380,7 @@ header nav .menu li a:hover {
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card {
   height: 100%;
   width: calc( 50% - 25px / 2 );
-  background-color: #fff;
+  position: relative;
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card:first-child {
   margin-right: calc(25px / 2);
@@ -387,14 +388,48 @@ header nav .menu li a:hover {
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card:last-child {
   margin-left: calc(25px / 2);
 }
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card .card-teaser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #323844;
+  padding: 20px;
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card .card-teaser .card-title {
+  margin-bottom: 5px;
+}
 .band-news .news-cards .col-right {
-  width: 35%;
-  height: 200px;
+  width: 32%;
   padding-left: 25px;
 }
-.band-news .news-cards .col-right .card-right-container {
+.band-news .news-cards .col-right .card-right-container .vertical-card-right {
+  position: relative;
+  height: calc(( 25px + 520px + 510px ) / 2);
+}
+.band-news .news-cards .col-right .card-right-container .vertical-card-right:first-child {
+  margin-bottom: 25px;
+}
+.band-news .news-cards .col-right .card-right-container .vertical-card-right img {
   height: 100%;
-  background-color: #fff;
-  border: 1px solid red;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.band-news .news-cards .col-right .card-right-container .vertical-card-right .card-teaser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #323844;
+  padding: 20px;
+}
+.band-news .news-cards .col-right .card-right-container .vertical-card-right .card-teaser .card-title {
+  margin-bottom: 5px;
 }

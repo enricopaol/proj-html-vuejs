@@ -49,14 +49,14 @@
         }
 
         .col-left {
-            width: 65%;
+            width: 68%;
 
             .horizontal-card {
-                height: 280px;
+                height: $left_horiz_card_height;
                 position: relative;
 
                 &:first-child {
-                    margin-bottom: 25px;
+                    margin-bottom: $cards_margin;
                 }                
 
                 img {
@@ -74,17 +74,31 @@
 
             .vertical-cards-container {
                 display: flex;
-                height: 510px;
-                margin-bottom: 25px;
+                height: $left_vertical_container_height;
+                margin-bottom: $cards_margin;
+                
 
                 .vertical-card {
                     @include vertical_blog_card;
+                    position: relative;
 
                     &:first-child {
-                        margin-right: calc(25px / 2);
+                        margin-right: calc(#{$cards_margin} / 2);
                     }
                     &:last-child {
-                        margin-left: calc(25px / 2)
+                        margin-left: calc(#{$cards_margin} / 2)
+                    }
+
+                    img {
+                        @include card_img;
+                    }
+
+                    .card-teaser {
+                        @include card_teaser;
+    
+                        .card-title {
+                            margin-bottom: 5px;
+                        }
                     }
                 }
             }
@@ -93,17 +107,32 @@
         }
 
         .col-right {
-            width: 35%;
-
-            // test
-            height: 200px;
+            width: 32%;
             padding-left: 25px;
 
             .card-right-container {
-                height: 100%;
-                background-color: #fff;
-                border: 1px solid red;
-                width: 100%;
+                
+
+                .vertical-card-right {
+                    position: relative;
+                    height: calc(( #{$cards_margin} + #{$left_horiz_card_height * 2} + #{$left_vertical_container_height} ) / 2);
+                
+                    &:first-child {
+                        margin-bottom: $cards_margin;
+                    }
+
+                    img {
+                        @include card_img;
+                    }
+
+                    .card-teaser {
+                        @include card_teaser;
+    
+                        .card-title {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
             }
         }
     }
