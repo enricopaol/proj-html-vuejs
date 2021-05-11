@@ -227,8 +227,10 @@
         margin-bottom: 15px;
 
         &.open .info-container {
-            height: auto;
+            height: 237px;
             padding-top: 30px;
+            opacity: 1;
+            transition: all .42s ease;
         }
         
         .icon-left,
@@ -248,7 +250,9 @@
         .info-container {
             display: flex;
             height: 0;
-            overflow: hidden;                        
+            opacity: 0;
+            overflow: hidden; 
+            transition: all .42s ease;                       
 
             .map {
                 width: 300px;

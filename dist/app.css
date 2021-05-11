@@ -515,8 +515,10 @@ header nav .menu li a:hover {
   margin-bottom: 15px;
 }
 .live-dates .single-date.open .info-container {
-  height: auto;
+  height: 237px;
   padding-top: 30px;
+  opacity: 1;
+  transition: all 0.42s ease;
 }
 .live-dates .single-date .icon-left,
 .live-dates .single-date .faq-text {
@@ -532,7 +534,9 @@ header nav .menu li a:hover {
 .live-dates .single-date .info-container {
   display: flex;
   height: 0;
+  opacity: 0;
   overflow: hidden;
+  transition: all 0.42s ease;
 }
 .live-dates .single-date .info-container .map {
   width: 300px;
