@@ -183,9 +183,9 @@
 // Video Section
 .video-section {
     height: 80vh;
-    background-image: url(../img/home-testimonial-parallax.jpg);
+    background-image: url('../img/home-testimonial-parallax.jpg');
     background-size: cover;
-
+    
     .container-small {
         height: 100%;
         display: flex;
@@ -200,5 +200,97 @@
             width: 70px;
             cursor: pointer;
         }
+    }    
+}
+
+// Live Dates Section
+.live-dates {
+    background-color: $brand_secondary_color;
+    padding: 60px 0;
+    
+
+    .section-title {       
+        text-align: center; 
+        &::after {
+            @include line_after_title;
+        }        
+    }
+
+    .container-small {
+        margin-bottom: 60px;
+        text-align: center;        
+    }
+
+    .single-date {
+        background-color: $brand_tertiary_color;
+        padding: 30px;
+        margin-bottom: 15px;
+
+        &.open .info-container {
+            height: auto;
+            padding-top: 30px;
+        }
+        
+        .icon-left,
+        .faq-text{
+            display: inline-block;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+    
+        .icon-left {
+            color: #fff;
+            cursor: pointer;
+            font-size: $medium_font_size;
+        }  
+        
+
+        .info-container {
+            display: flex;
+            height: 0;
+            overflow: hidden;                        
+
+            .map {
+                width: 300px;
+                margin-right: 30px;
+                flex-shrink: 0;
+
+                // Test
+                background-color: #fff;
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .info {
+                color: #fff;
+
+                .info-title {
+                    font-size: $medium_font_size;
+                    font-weight: 500;
+                }
+
+                .normal-text {
+                    margin: 30px 0;
+                }
+
+                .info-button {
+                    @include buttons_base_style;
+                    background-color: $brand_primary_color; 
+                    display: inline-block;   
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+            }
+
+
+
+        }
     }
 }
+

@@ -11,11 +11,19 @@ var app = new Vue({
   el: '#app',
   data: {
     pages: ['Home', 'Meet The Brand', 'Live Dates', 'Latest News', 'Albums', 'Fans'],
-    navOpen: false
+    navOpen: false,
+    dateOpen: -1
   },
   methods: {
     toggleNav: function toggleNav() {
       this.navOpen = !this.navOpen;
+    },
+    toggleDate: function toggleDate(index) {
+      if (this.dateOpen != index) {
+        this.dateOpen = index;
+      } else {
+        this.dateOpen = -1;
+      }
     }
   }
 });

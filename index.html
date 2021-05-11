@@ -239,13 +239,56 @@
                    </div>
                 </div>
             </section>
-            <!-- End Section Video -->
+            <!-- End Section Video -->   
+            
+            <!-- Section Live Dates -->
+            <section class="live-dates">
+                <h2 class="section-title">Live Dates</h2>
+                <div class="container-small">
+                    <p class="normal-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatum adipisci ea eligendi iste sunt obcaecati nemo! Animi, facere, blanditiis velit quasi numquam.</p>
+                </div>
+
+                <div class="container-medium">
+
+                    <!-- Single Date -->
+                    <div v-for="(date, index) in 5" class="single-date" :class="{open : dateOpen == index}">
+
+                        <div @click="toggleDate(index)" class="icon-left">
+                            <i class="fas fa-plus"></i>                            
+                        </div>
+                        <p class="faq-text">jsjjksdbfjkvbeaklrvhjiqkebvkjqebvqbvb</p>
+
+                        <!-- Info Container -->
+                        <div class="info-container">
+
+                            <!-- Map -->
+                            <div id="map" class="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45285.99547940309!2d11.65359103547566!3d44.81393025200887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477e422c132b2eef%3A0x3079b0bfcba7fc0!2sProvincia%20di%20Ferrara!5e0!3m2!1sit!2sit!4v1620745133871!5m2!1sit!2sit"></iframe>
+                            </div>
+
+                            <!-- Infos -->
+                            <div class="info">
+                                <h4 class="info-title">Untold Stories</h4>
+                                <p class="normal-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aspernatur totam aperiam necessitatibus labore molestias sequi consequatur ad velit odio. Obcaecati fuga repudiandae vitae aliquid deserunt amet aut enim pariatur.
+                                </p>
+
+                                <a href="#" class="info-button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </section>
+            <!-- End Section Live Dates -->
 
         </main>
         <!-- END MAIN -->
-
     </div>
     <!-- End App Wrapper -->
+    
     
     <script src="dist/app.js"></script>
 </body>

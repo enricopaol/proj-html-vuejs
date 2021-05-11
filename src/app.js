@@ -10,13 +10,21 @@ var app = new Vue(
                 'Albums',
                 'Fans'
             ],
-            navOpen: false
+            navOpen: false,
+            dateOpen: -1
         },
         methods: {
             toggleNav() {
                 this.navOpen = !this.navOpen;
-            }
-
-        }
+            },
+            toggleDate(index) {
+                if (this.dateOpen != index) {
+                    this.dateOpen = index;
+                } else {
+                    this.dateOpen = -1;
+                }                
+                
+            } 
+        }  
     }
 )
