@@ -22,7 +22,7 @@
     width: 100%;
     background-color: $brand_tertiary_color;
     padding: 20px;
-    transition: .42s ease;
+    transition: .32s ease;
 }
 
 @mixin card_hover {
@@ -40,7 +40,7 @@
     font-weight: 400;
     padding: 20px;
     text-align: center;
-    transition: .42s ease;
+    transition: .32s ease;
     opacity: 0;
 }
 

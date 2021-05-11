@@ -28,7 +28,7 @@
 // Band News Section
 .band-news {
     background-color: $brand_secondary_color;
-    padding: 60px 0;
+    padding: 60px 0 0;
     text-align: center;
 
     .section-title {        
@@ -43,6 +43,7 @@
 
     .news-cards {
         text-align: left;
+        margin-bottom: 80px;
 
         .container-medium {
             display: flex;
@@ -177,9 +178,27 @@
             }
         }
     }
+}
 
+// Video Section
+.video-section {
+    height: 80vh;
+    background-image: url(../img/home-testimonial-parallax.jpg);
+    background-size: cover;
 
-
-    
-
+    .container-small {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;    
+        
+        .play-video-img {
+            margin-top: 40px;
+            height: 70px;
+            width: 70px;
+            cursor: pointer;
+        }
+    }
 }

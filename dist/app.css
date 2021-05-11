@@ -13,6 +13,18 @@ img {
   display: block;
 }
 
+.section-cta {
+  display: block;
+  padding: 40px;
+  background-color: #ea4a56;
+  text-decoration: none;
+  transition: all 0.32s ease;
+}
+.section-cta:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .container-large {
   width: 92%;
   margin: auto;
@@ -24,7 +36,7 @@ img {
 }
 
 .container-small {
-  width: 55%;
+  width: 50%;
   margin: auto;
 }
 
@@ -63,6 +75,8 @@ img {
   font-weight: 300;
   color: #fff;
   font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 3px;
 }
 
 .normal-text {
@@ -263,7 +277,7 @@ header nav .menu li a:hover {
 
 .band-news {
   background-color: #272b34;
-  padding: 60px 0;
+  padding: 60px 0 0;
   text-align: center;
 }
 .band-news .section-title::after {
@@ -281,6 +295,7 @@ header nav .menu li a:hover {
 }
 .band-news .news-cards {
   text-align: left;
+  margin-bottom: 80px;
 }
 .band-news .news-cards .container-medium {
   display: flex;
@@ -311,7 +326,7 @@ header nav .menu li a:hover {
   font-weight: 400;
   padding: 20px;
   text-align: center;
-  transition: 0.42s ease;
+  transition: 0.32s ease;
   opacity: 0;
 }
 .band-news .news-cards .col-left .horizontal-card:hover .card-hover {
@@ -333,7 +348,7 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
-  transition: 0.42s ease;
+  transition: 0.32s ease;
 }
 .band-news .news-cards .col-left .horizontal-card .card-teaser .card-title {
   margin-bottom: 5px;
@@ -370,7 +385,7 @@ header nav .menu li a:hover {
   font-weight: 400;
   padding: 20px;
   text-align: center;
-  transition: 0.42s ease;
+  transition: 0.32s ease;
   opacity: 0;
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card:hover .card-hover {
@@ -392,7 +407,7 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
-  transition: 0.42s ease;
+  transition: 0.32s ease;
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card .card-teaser .card-title {
   margin-bottom: 5px;
@@ -424,7 +439,7 @@ header nav .menu li a:hover {
   font-weight: 400;
   padding: 20px;
   text-align: center;
-  transition: 0.42s ease;
+  transition: 0.32s ease;
   opacity: 0;
 }
 .band-news .news-cards .col-right .card-right-container .vertical-card-right:hover .card-hover {
@@ -446,8 +461,28 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
-  transition: 0.42s ease;
+  transition: 0.32s ease;
 }
 .band-news .news-cards .col-right .card-right-container .vertical-card-right .card-teaser .card-title {
   margin-bottom: 5px;
+}
+
+.video-section {
+  height: 80vh;
+  background-image: url(../img/home-testimonial-parallax.jpg);
+  background-size: cover;
+}
+.video-section .container-small {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.video-section .container-small .play-video-img {
+  margin-top: 40px;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
 }

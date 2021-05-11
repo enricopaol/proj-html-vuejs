@@ -14,6 +14,19 @@ img {
     display: block;
 }
 
+.section-cta {
+    display: block;
+    padding: 40px;
+    background-color: $brand_primary_color;
+    text-decoration: none;
+    transition: all .32s ease;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
 // Containers
 .container-large {
     width: 92%;
@@ -26,7 +39,7 @@ img {
 }
 
 .container-small {
-    width: 55%;
+    width: 50%;
     margin: auto;
 }
 
@@ -68,6 +81,8 @@ img {
     font-weight: 300;
     color: #fff;   
     font-size: $medium_font_size; 
+    line-height: 35px;
+    letter-spacing: 3px;
 }
 
 .normal-text {
