@@ -75,7 +75,7 @@ header {
                     text-transform: uppercase;
                     color: #fff;
                     text-decoration: none;  
-                    transition: background-color .12s ease;                  
+                    transition: background-color .32s ease;                  
 
                     &:first-child {
                         background-color: $brand_primary_color;
@@ -100,19 +100,31 @@ header {
     }
 
     nav {        
-        display: none;
+        visibility: hidden;
+        opacity: 0;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $brand_primary_color; 
-        animation-name: nav-opacity;
-        animation-duration: .32s;  
-        z-index: 999;      
+        background-color: $brand_primary_color;          
+        z-index: 999;   
+        transition: opacity .42s, visibility .42s;   
         
         &.active {
-            display: block;
+            visibility: visible;
+            opacity: 1;    
+            
+            .row-top .burger .times {
+                visibility: visible;  
+
+                &:first-child {
+                    transform: rotate(-45deg) translate(-6px, 6px);
+                }
+                &:last-child {
+                    transform: rotate(45deg) translate(-6px, -6px);                    
+                }
+            }
         }
         
         .nav-container {
@@ -123,43 +135,34 @@ header {
         }
 
         .row-top {
-            .burger {
-                position: relative;
-                height: 60px;
+            .burger {                
+                color: #fff;
+                height: 25px;
                 width: 35px;
+                cursor: pointer;
 
                 &:hover {
                     .times {
-                        opacity: 1;
+                        opacity: 1;                        
                     } 
                 }                
 
                 .times {
-                    position: absolute;
-                    bottom: 50%;
-                    left: 0;
-                    transform: translate(-50%, -50%);                    
-                    height: 3px;
-                    width: 35px;
+                    visibility: hidden;
                     background-color: #fff;  
                     opacity: 0.7;    
-                    transition: opacity .12s;                                     
+                    transition: all .42s;                       
+                    transform: rotate(0deg);
+ 
+                    height: 2px;
 
-                    &:first-child {
-                        transform: rotate(0deg);
-                        animation-name: times-1;
-                        animation-duration: .42s;
-                        animation-timing-function: ease; 
-                        animation-fill-mode: forwards;
-                    }
-                    &:last-child {
-                        transform: rotate(0deg);
-                        animation-name: times-2;
-                        animation-duration: .42s;
-                        animation-timing-function: ease;
-                        animation-fill-mode: forwards;
-                    }
+                    &:nth-child(2) {
+                        height: 3px;
+                        margin: 6px 0; 
+                        opacity: 0;                       
+                    }                                        
                 }
+                
             }
         }
 
@@ -191,32 +194,3 @@ header {
     
 }
 
-
-// Animations
-
-@keyframes nav-opacity {
-    from {
-        opacity: 0.1
-    } to {
-        opacity: 1;
-    }
-}
-
-
-@keyframes times-1 {
-    1% {
-        transform: rotate(0deg);
-    } 
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-@keyframes times-2 {
-    1% {
-        transform: rotate(0deg);
-    } 
-    100% {
-        transform: rotate(-45deg);
-    }
-}

@@ -54,10 +54,23 @@
             .horizontal-card {
                 height: $left_horiz_card_height;
                 position: relative;
+                cursor: pointer;
 
                 &:first-child {
                     margin-bottom: $cards_margin;
-                }                
+                }   
+                
+                .card-hover {
+                    @include card_hover;
+                }
+                &:hover {
+                    .card-hover {
+                        opacity: 1;  
+                    }
+                    .card-teaser {
+                        opacity: 0;
+                    }
+                }
 
                 img {
                     @include card_img;
@@ -70,6 +83,8 @@
                         margin-bottom: 5px;
                     }
                 }
+
+                
             }
 
             .vertical-cards-container {
@@ -81,12 +96,25 @@
                 .vertical-card {
                     @include vertical_blog_card;
                     position: relative;
+                    cursor: pointer;
 
                     &:first-child {
                         margin-right: calc(#{$cards_margin} / 2);
                     }
                     &:last-child {
                         margin-left: calc(#{$cards_margin} / 2)
+                    }
+
+                    .card-hover {
+                        @include card_hover;
+                    }
+                    &:hover {
+                        .card-hover {
+                            opacity: 1;  
+                        }
+                        .card-teaser {
+                            opacity: 0;
+                        }
                     }
 
                     img {
@@ -116,9 +144,22 @@
                 .vertical-card-right {
                     position: relative;
                     height: calc(( #{$cards_margin} + #{$left_horiz_card_height * 2} + #{$left_vertical_container_height} ) / 2);
-                
+                    cursor: pointer;
+
                     &:first-child {
                         margin-bottom: $cards_margin;
+                    }
+
+                    .card-hover {
+                        @include card_hover;
+                    }
+                    &:hover {
+                        .card-hover {
+                            opacity: 1;  
+                        }
+                        .card-teaser {
+                            opacity: 0;
+                        }
                     }
 
                     img {

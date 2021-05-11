@@ -22,6 +22,26 @@
     width: 100%;
     background-color: $brand_tertiary_color;
     padding: 20px;
+    transition: .42s ease;
+}
+
+@mixin card_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ea4a55b4;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $medium_font_size;
+    font-weight: 400;
+    padding: 20px;
+    text-align: center;
+    transition: .42s ease;
+    opacity: 0;
 }
 
 @mixin vertical_blog_card {

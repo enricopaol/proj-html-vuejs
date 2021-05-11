@@ -148,7 +148,7 @@ header .jumbotron .teaser .buttons a {
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
-  transition: background-color 0.12s ease;
+  transition: background-color 0.32s ease;
 }
 header .jumbotron .teaser .buttons a:first-child {
   background-color: #ea4a56;
@@ -163,21 +163,29 @@ header .jumbotron .teaser .buttons a:hover {
   color: #000;
 }
 header nav {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #ea4a56;
-  -webkit-animation-name: nav-opacity;
-          animation-name: nav-opacity;
-  -webkit-animation-duration: 0.32s;
-          animation-duration: 0.32s;
   z-index: 999;
+  transition: opacity 0.42s, visibility 0.42s;
 }
 header nav.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+header nav.active .row-top .burger .times {
+  visibility: visible;
+}
+header nav.active .row-top .burger .times:first-child {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+header nav.active .row-top .burger .times:last-child {
+  transform: rotate(45deg) translate(-6px, -6px);
 }
 header nav .nav-container {
   width: 100%;
@@ -186,45 +194,26 @@ header nav .nav-container {
   flex-direction: column;
 }
 header nav .row-top .burger {
-  position: relative;
-  height: 60px;
+  color: #fff;
+  height: 25px;
   width: 35px;
+  cursor: pointer;
 }
 header nav .row-top .burger:hover .times {
   opacity: 1;
 }
 header nav .row-top .burger .times {
-  position: absolute;
-  bottom: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  height: 3px;
-  width: 35px;
+  visibility: hidden;
   background-color: #fff;
   opacity: 0.7;
-  transition: opacity 0.12s;
-}
-header nav .row-top .burger .times:first-child {
+  transition: all 0.42s;
   transform: rotate(0deg);
-  -webkit-animation-name: times-1;
-          animation-name: times-1;
-  -webkit-animation-duration: 0.42s;
-          animation-duration: 0.42s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  height: 2px;
 }
-header nav .row-top .burger .times:last-child {
-  transform: rotate(0deg);
-  -webkit-animation-name: times-2;
-          animation-name: times-2;
-  -webkit-animation-duration: 0.42s;
-          animation-duration: 0.42s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+header nav .row-top .burger .times:nth-child(2) {
+  height: 3px;
+  margin: 6px 0;
+  opacity: 0;
 }
 header nav .menu {
   display: flex;
@@ -245,55 +234,6 @@ header nav .menu li a:hover {
   opacity: 1;
 }
 
-@-webkit-keyframes nav-opacity {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes nav-opacity {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes times-1 {
-  1% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
-@keyframes times-1 {
-  1% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
-@-webkit-keyframes times-2 {
-  1% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-45deg);
-  }
-}
-@keyframes times-2 {
-  1% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-45deg);
-  }
-}
 .music-life {
   padding: 60px 0;
   background-color: #323844;
@@ -351,9 +291,34 @@ header nav .menu li a:hover {
 .band-news .news-cards .col-left .horizontal-card {
   height: 260px;
   position: relative;
+  cursor: pointer;
 }
 .band-news .news-cards .col-left .horizontal-card:first-child {
   margin-bottom: 25px;
+}
+.band-news .news-cards .col-left .horizontal-card .card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ea4a55b4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  text-align: center;
+  transition: 0.42s ease;
+  opacity: 0;
+}
+.band-news .news-cards .col-left .horizontal-card:hover .card-hover {
+  opacity: 1;
+}
+.band-news .news-cards .col-left .horizontal-card:hover .card-teaser {
+  opacity: 0;
 }
 .band-news .news-cards .col-left .horizontal-card img {
   height: 100%;
@@ -368,6 +333,7 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
+  transition: 0.42s ease;
 }
 .band-news .news-cards .col-left .horizontal-card .card-teaser .card-title {
   margin-bottom: 5px;
@@ -381,12 +347,37 @@ header nav .menu li a:hover {
   height: 100%;
   width: calc( 50% - 25px / 2 );
   position: relative;
+  cursor: pointer;
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card:first-child {
   margin-right: calc(25px / 2);
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card:last-child {
   margin-left: calc(25px / 2);
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card .card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ea4a55b4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  text-align: center;
+  transition: 0.42s ease;
+  opacity: 0;
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card:hover .card-hover {
+  opacity: 1;
+}
+.band-news .news-cards .col-left .vertical-cards-container .vertical-card:hover .card-teaser {
+  opacity: 0;
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card img {
   height: 100%;
@@ -401,6 +392,7 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
+  transition: 0.42s ease;
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card .card-teaser .card-title {
   margin-bottom: 5px;
@@ -412,9 +404,34 @@ header nav .menu li a:hover {
 .band-news .news-cards .col-right .card-right-container .vertical-card-right {
   position: relative;
   height: calc(( 25px + 520px + 510px ) / 2);
+  cursor: pointer;
 }
 .band-news .news-cards .col-right .card-right-container .vertical-card-right:first-child {
   margin-bottom: 25px;
+}
+.band-news .news-cards .col-right .card-right-container .vertical-card-right .card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ea4a55b4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  text-align: center;
+  transition: 0.42s ease;
+  opacity: 0;
+}
+.band-news .news-cards .col-right .card-right-container .vertical-card-right:hover .card-hover {
+  opacity: 1;
+}
+.band-news .news-cards .col-right .card-right-container .vertical-card-right:hover .card-teaser {
+  opacity: 0;
 }
 .band-news .news-cards .col-right .card-right-container .vertical-card-right img {
   height: 100%;
@@ -429,6 +446,7 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
+  transition: 0.42s ease;
 }
 .band-news .news-cards .col-right .card-right-container .vertical-card-right .card-teaser .card-title {
   margin-bottom: 5px;
