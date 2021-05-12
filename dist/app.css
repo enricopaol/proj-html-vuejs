@@ -519,6 +519,13 @@ header nav .menu li a:hover {
   background-color: #323844;
   padding: 30px;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+.live-dates .single-date:hover .faq-text {
+  color: #fff;
+}
+.live-dates .single-date:hover .icon-left {
+  background-color: #ea4a56;
 }
 .live-dates .single-date.open .info-container {
   height: 237px;
@@ -530,11 +537,20 @@ header nav .menu li a:hover {
   display: inline-block;
   margin-right: 15px;
   vertical-align: middle;
+  transition: all 0.32s ease;
 }
 .live-dates .single-date .icon-left {
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.live-dates .single-date .icon-left i {
+  line-height: 20px;
+  display: block;
+  transform: translateX(-0.5px);
 }
 .live-dates .single-date .info-container {
   display: flex;

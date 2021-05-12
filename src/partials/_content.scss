@@ -232,6 +232,16 @@
         background-color: $brand_tertiary_color;
         padding: 30px;
         margin-bottom: 15px;
+        cursor: pointer;
+
+        &:hover {
+            .faq-text {
+                color: #fff;
+            }
+            .icon-left {
+                background-color: $brand_primary_color;
+            }
+        }
 
         &.open .info-container {
             height: 237px;
@@ -244,12 +254,24 @@
             display: inline-block;
             margin-right: 15px;
             vertical-align: middle;
+            transition: all .32s ease;
         }
     
         .icon-left {
             color: #fff;
-            cursor: pointer;
-            font-size: $medium_font_size;
+            cursor: pointer;            
+            width: 20px;
+            height: 20px;
+            text-align: center;   
+            font-size: 12px;       
+
+
+
+            i {
+                line-height: 20px;
+                display: block;  
+                transform: translateX(- 0.5px);              
+            }
         }  
         
 
