@@ -27,6 +27,16 @@ var app = new Vue({
     }
   }
 });
+window.addEventListener('scroll', parallax);
+
+function parallax() {
+  var element = document.getElementsByClassName('parallax')[0];
+  var scrollY = window.pageYOffset;
+  var elementOffset = element.offsetTop;
+  var viewPortHeight = window.innerHeight;
+  var positionY = scrollY * -0.7 + elementOffset * 0.7 - viewPortHeight * 0.2 + 'px';
+  element.style.backgroundPosition = 'center ' + positionY;
+}
 
 /***/ }),
 

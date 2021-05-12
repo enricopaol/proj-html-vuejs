@@ -470,8 +470,14 @@ header nav .menu li a:hover {
 
 .video-section {
   height: 80vh;
+  overflow: hidden;
+}
+.video-section .parallax {
+  width: auto;
+  height: 100%;
   background-image: url("../img/home-testimonial-parallax.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 .video-section .container-small {
   height: 100%;
@@ -518,7 +524,6 @@ header nav .menu li a:hover {
   height: 237px;
   padding-top: 30px;
   opacity: 1;
-  transition: all 0.42s ease;
 }
 .live-dates .single-date .icon-left,
 .live-dates .single-date .faq-text {
