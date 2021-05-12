@@ -598,3 +598,34 @@ header nav .menu li a:hover {
   background-color: #fff;
   color: #000;
 }
+
+footer .container-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-top {
+  background-color: #323844;
+  padding: 40px 0;
+}
+footer .footer-top .logo-footer {
+  width: 200px;
+}
+footer .footer-top .footer-nav ul {
+  list-style-type: none;
+  display: flex;
+}
+footer .footer-top .footer-nav ul li {
+  margin-left: 20px;
+}
+footer .footer-top .footer-nav ul li:first-child a {
+  color: #fff;
+}
+footer .footer-top .footer-nav ul li a {
+  display: block;
+  text-decoration: none;
+  transition: color 0.32s ease;
+}
+footer .footer-top .footer-nav ul li a:hover {
+  color: #fff;
+}

@@ -1,0 +1,46 @@
+footer {
+    .container-large {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-top {
+        background-color: $brand_tertiary_color;
+        padding: 40px 0;
+
+        .logo-footer {
+            width: 200px;
+        }
+    
+        .footer-nav {
+    
+            ul {
+                list-style-type: none;
+                display: flex;
+    
+                li {
+                    margin-left: 20px;
+    
+                    &:first-child  a{
+                        color: #fff;
+                    }
+                    
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        transition: color .32s ease;
+
+                        &:hover {
+                            color: #fff;
+                        }
+
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    
+}

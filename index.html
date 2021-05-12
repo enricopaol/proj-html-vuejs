@@ -301,7 +301,31 @@
 
         <!-- FOOTER -->
         <footer>
-            
+
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container-large">
+                    
+                     <div class="logo-footer">
+                         <img src="img/avada-music-logo.png" alt="avada music logo">
+                     </div>
+                     
+                     <nav class="footer-nav">
+                         <ul>
+
+                             <li 
+                             v-for="page in pages"
+                            >
+                                <a class="normal-text" href="#">
+                                    {{page}}
+                                </a>  
+                            </li>
+
+                         </ul>
+                     </nav>
+
+                </div>
+            </div>
         </footer>
         <!-- END FOOTER -->
     </div>
