@@ -213,7 +213,8 @@
 // Live Dates Section
 .live-dates {
     background-color: $brand_secondary_color;
-    padding: 60px 0;
+    padding: 60px 0 0;
+    text-align: center;
     
 
     .section-title {       
@@ -228,11 +229,15 @@
         text-align: center;        
     }
 
+    .container-medium {
+        margin-bottom: 80px;
+    }
     .single-date {
         background-color: $brand_tertiary_color;
-        padding: 30px;
+        padding: 25px;
         margin-bottom: 15px;
         cursor: pointer;
+        text-align: left;
 
         &:hover {
             .faq-text {
@@ -260,15 +265,15 @@
         .icon-left {
             color: #fff;
             cursor: pointer;            
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             text-align: center;   
             font-size: 12px;       
 
 
 
             i {
-                line-height: 20px;
+                line-height: 25px;
                 display: block;  
                 transform: translateX(- 0.5px);              
             }
