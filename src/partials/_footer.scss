@@ -25,7 +25,7 @@ footer {
                     &:first-child  a{
                         color: #fff;
                     }
-                    
+
                     a {
                         display: block;
                         text-decoration: none;
@@ -33,9 +33,75 @@ footer {
 
                         &:hover {
                             color: #fff;
-                        }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
 
-                        
+    .footer-bottom {
+        background-color: $brand_secondary_color;
+        padding: 30px 0;
+
+        .credits {
+            ul {
+                display: flex; 
+                list-style-type: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: unset;
+
+                li {
+                    margin-right: 10px;
+                    padding-right: 10px;
+                    border-right: 2px solid;
+
+                    &:last-child {
+                        border-width: 0;
+                    }
+
+                    &:first-child {
+                        text-transform: capitalize;
+                    }
+
+                    a {
+                        color: $brand_text_color;
+                        text-decoration: none;
+                        transition: color .32s ease;
+
+                        &:hover {
+                            color: #fff;                            
+                        }
+                    }
+                }
+            }
+                           
+        }
+
+        .social {
+            ul {
+                list-style-type: none;
+                font-size: $standard_font_size;
+                display: flex;     
+                
+                li {
+                    text-align: center;
+                    line-height: 30px;
+
+                    &:hover a {
+                        color: #fff;
+                    }
+
+                    a {
+                        color: $brand_text_color;
+                        display: block;
+                        text-decoration: none;
+                        background-color: $brand_tertiary_color;
+                        height: 30px;
+                        width: 30px;
+                        margin-left: 10px;
+                        transition: color .32s ease;
                     }
                 }
             }

@@ -629,3 +629,55 @@ footer .footer-top .footer-nav ul li a {
 footer .footer-top .footer-nav ul li a:hover {
   color: #fff;
 }
+footer .footer-bottom {
+  background-color: #272b34;
+  padding: 30px 0;
+}
+footer .footer-bottom .credits ul {
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: unset;
+}
+footer .footer-bottom .credits ul li {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 2px solid;
+}
+footer .footer-bottom .credits ul li:last-child {
+  border-width: 0;
+}
+footer .footer-bottom .credits ul li:first-child {
+  text-transform: capitalize;
+}
+footer .footer-bottom .credits ul li a {
+  color: #75726e;
+  text-decoration: none;
+  transition: color 0.32s ease;
+}
+footer .footer-bottom .credits ul li a:hover {
+  color: #fff;
+}
+footer .footer-bottom .social ul {
+  list-style-type: none;
+  font-size: 14px;
+  display: flex;
+}
+footer .footer-bottom .social ul li {
+  text-align: center;
+  line-height: 30px;
+}
+footer .footer-bottom .social ul li:hover a {
+  color: #fff;
+}
+footer .footer-bottom .social ul li a {
+  color: #75726e;
+  display: block;
+  text-decoration: none;
+  background-color: #323844;
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+  transition: color 0.32s ease;
+}
