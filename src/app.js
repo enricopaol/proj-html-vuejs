@@ -49,7 +49,7 @@ var app = new Vue(
                     thisDate.style.height = 0 + 'px';
                 }
                 
-                // Then i toggle the class 'open' (that controls icon, margin and opacity)
+                // Then i toggle the class 'open' (that controls icon, margin and opacity), and open the right date
                 if (this.dateOpen != index) {
                     this.dateOpen = index;                           
                     document.getElementsByClassName('info-container')[index].style.height = elementHeight + 'px';

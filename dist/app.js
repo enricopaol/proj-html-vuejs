@@ -42,7 +42,7 @@ var app = new Vue({
       for (var i = 0; i < dates.length; i++) {
         thisDate = dates[i];
         thisDate.style.height = 0 + 'px';
-      } // Then i toggle the class 'open' (that controls icon, margin and opacity)
+      } // Then i toggle the class 'open' (that controls icon, margin and opacity), and open the right date
 
 
       if (this.dateOpen != index) {
