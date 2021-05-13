@@ -349,7 +349,7 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
-  transition: 0.32s ease;
+  transition: opacity 0.32s ease;
 }
 .band-news .news-cards .col-left .horizontal-card .card-teaser .card-title {
   margin-bottom: 5px;
@@ -408,13 +408,13 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
-  transition: 0.32s ease;
+  transition: opacity 0.32s ease;
 }
 .band-news .news-cards .col-left .vertical-cards-container .vertical-card .card-teaser .card-title {
   margin-bottom: 5px;
 }
 .band-news .news-cards .col-right {
-  width: 32%;
+  width: calc( 100% - 68%);
   padding-left: 25px;
 }
 .band-news .news-cards .col-right .card-right-container .vertical-card-right {
@@ -462,7 +462,7 @@ header nav .menu li a:hover {
   width: 100%;
   background-color: #323844;
   padding: 20px;
-  transition: 0.32s ease;
+  transition: opacity 0.32s ease;
 }
 .band-news .news-cards .col-right .card-right-container .vertical-card-right .card-teaser .card-title {
   margin-bottom: 5px;

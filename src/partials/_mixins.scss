@@ -31,7 +31,7 @@
     width: 100%;
     background-color: $brand_tertiary_color;
     padding: 20px;
-    transition: .32s ease;
+    transition: opacity .32s ease;
 }
 
 @mixin card_hover {

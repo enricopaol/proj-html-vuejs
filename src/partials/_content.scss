@@ -50,7 +50,7 @@
         }
 
         .col-left {
-            width: 68%;
+            width: $col_left_width;
 
             .horizontal-card {
                 height: $left_horiz_card_height;
@@ -136,8 +136,8 @@
         }
 
         .col-right {
-            width: 32%;
-            padding-left: 25px;
+            width: calc( 100% - #{$col_left_width});
+            padding-left: $cards_margin;
 
             .card-right-container {
                 
