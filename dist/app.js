@@ -50,7 +50,6 @@ var app = new Vue({
         document.getElementsByClassName('info-container')[index].style.height = elementHeight + 'px';
       } else {
         this.dateOpen = -1;
-        document.getElementsByClassName('info-container')[index].style.height = 0 + 'px';
       }
     }
   }
