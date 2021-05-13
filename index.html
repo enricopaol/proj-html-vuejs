@@ -257,7 +257,7 @@
                         v-for="(date, index) in liveDates" 
                         class="single-date" 
                         :class="{open : dateOpen == index}"
-                        @click="toggleDate(index)"
+                        @click="toggleDate(index, date)"
                     >
 
                         <div class="icon-left" :class="{open : dateOpen == index}">
@@ -281,7 +281,6 @@
                                 <p class="normal-text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aspernatur totam aperiam necessitatibus labore molestias sequi consequatur ad velit odio. Obcaecati fuga repudiandae vitae aliquid deserunt amet aut enim pariatur.
                                 </p>
-
                                 <a href="#" class="info-button">Book Now</a>
                             </div>
                         </div>

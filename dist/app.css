@@ -533,8 +533,7 @@ header nav .menu li a:hover {
   background-color: #ea4a56;
 }
 .live-dates .single-date.open .info-container {
-  height: 237px;
-  padding-top: 30px;
+  margin-top: 30px;
   opacity: 1;
 }
 .live-dates .single-date .icon-left,

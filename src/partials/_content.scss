@@ -249,8 +249,8 @@
         }
 
         &.open .info-container {
-            height: 237px;
-            padding-top: 30px;
+            // max-height: 237px;
+            margin-top: 30px;
             opacity: 1;            
         }
         

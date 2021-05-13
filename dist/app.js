@@ -35,10 +35,22 @@ var app = new Vue({
       this.navOpen = !this.navOpen;
     },
     toggleDate: function toggleDate(index) {
+      var elementHeight = document.getElementsByClassName('info-container')[index].scrollHeight; // First I close all the dates
+
+      var dates = document.getElementsByClassName('info-container');
+
+      for (var i = 0; i < dates.length; i++) {
+        thisDate = dates[i];
+        thisDate.style.height = 0 + 'px';
+      } // Then i toggle the class 'open' (that controls icon, margin and opacity)
+
+
       if (this.dateOpen != index) {
         this.dateOpen = index;
+        document.getElementsByClassName('info-container')[index].style.height = elementHeight + 'px';
       } else {
         this.dateOpen = -1;
+        document.getElementsByClassName('info-container')[index].style.height = 0 + 'px';
       }
     }
   }
